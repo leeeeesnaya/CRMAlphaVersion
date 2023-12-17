@@ -1,17 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Atlassian.Jira;
-using Atlassian.Jira.Remote;
-using Newtonsoft.Json;
 using OtpNet;
+using System.Data.SqlClient;
 
 namespace CRMAlphaVersion
 {
@@ -19,6 +11,7 @@ namespace CRMAlphaVersion
     {
         private Jira _jira;
         private AuthenticatorService authenticatorService;
+        DataBase dataBase;
 
         public Form1()
         {
@@ -93,8 +86,6 @@ namespace CRMAlphaVersion
 
         private void GenerateSecretKey_Click(object sender, EventArgs e)
         {
-            //string secretKey = authenticatorService.GetSecretKey();
-            //MessageBox.Show($"Generated Secret Key: {secretKey}");
             TestAuthenticator newForm = new TestAuthenticator();
             newForm.Show();
         }
@@ -104,6 +95,59 @@ namespace CRMAlphaVersion
             string secretKey = "your-secret-key-here"; // Замените на реальный секретный ключ
             string totp = authenticatorService.GenerateTotp(secretKey);
             MessageBox.Show($"Generated TOTP: {totp}");
+        }
+
+        private void GeneratePassword_Click(object sender, EventArgs e)
+        {
+            string salt = BCrypt.Net.BCrypt.GenerateSalt();
+            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(DefaultPassword.Text, salt);
+
+            GeneratePasswordStr.Text =  hashedPassword;
+        }
+
+        private void ConnectButton_Click(object sender, EventArgs e)
+        {
+            var lgnUser = LoginUser.Text;
+            var passUser = PasswordUser.Text;
+
+            DataBase dataBase = new DataBase();
+
+            string storedHashedPassword = GetUserPasswordFromDatabase(dataBase, lgnUser);
+
+            if (storedHashedPassword != null && PasswordHasher.VerifyPassword(passUser, storedHashedPassword))
+            {
+                MessageBox.Show("Успех успешный", "Успешная авторизация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Лох ебаный", "Авторизация отклонена", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private string GetUserPasswordFromDatabase(DataBase dataBase, string lgnUser)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(dataBase.GetConnection().ConnectionString))
+                {
+                    connection.Open();
+
+                    string queryString = "SELECT PasswordUser FROM Users WHERE NameUser = @NameUser";
+                    using (SqlCommand command = new SqlCommand(queryString, connection))
+                    {
+                        command.Parameters.AddWithValue("@NameUser", lgnUser);
+
+                        object result = command.ExecuteScalar();
+
+                        return result != null ? result.ToString() : null;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Произошла ошибка при выполнении запроса: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
         }
     }
 }

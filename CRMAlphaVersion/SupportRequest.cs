@@ -1,16 +1,6 @@
 ﻿using System;
-using System.Security.Cryptography;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Atlassian.Jira;
-using Atlassian.Jira.Remote;
-using Newtonsoft.Json;
 
 namespace CRMAlphaVersion
 {
@@ -35,7 +25,6 @@ namespace CRMAlphaVersion
 
                 string taskIssueTypeId = "10001";
 
-                // Создание задачи в проекте
                 var issue = _jira.CreateIssue("SUPPORT");
                 issue.Type = new IssueType(taskIssueTypeId);
                 issue.Summary = SummaryText.Text;
@@ -56,8 +45,9 @@ namespace CRMAlphaVersion
             if (string.IsNullOrWhiteSpace(SummaryText.Text) || string.IsNullOrWhiteSpace(DescriptionText.Text) || Priority.SelectedItem == null)
             {
                 MessageBox.Show("Все поля должны быть заполнены", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Прекращаем выполнение метода, если есть пустые поля
+                return; 
             }
+
             string summaryText = SummaryText.Text;
             string descriptionText = DescriptionText.Text;
             string selectedValue = Priority.SelectedItem.ToString();

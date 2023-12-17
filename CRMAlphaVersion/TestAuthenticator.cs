@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using OtpNet;
 using QRCoder;
@@ -62,9 +56,8 @@ namespace CRMAlphaVersion
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
             QRCodeData qrCodeData = qrGenerator.CreateQrCode(totpUri, QRCodeGenerator.ECCLevel.Q);
             QRCode qrCode = new QRCode(qrCodeData);
-            Bitmap qrCodeImage = qrCode.GetGraphic(20); // 20 - размер пикселя
+            Bitmap qrCodeImage = qrCode.GetGraphic(20); 
 
-            // Установка изображения QR-кода в PictureBox
             pictureBoxQRCode.Image = qrCodeImage;
             pictureBoxQRCode.SizeMode = PictureBoxSizeMode.StretchImage;
         }

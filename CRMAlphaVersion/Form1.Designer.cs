@@ -30,11 +30,18 @@
         {
             this.SupportRequest = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ConnectButton = new System.Windows.Forms.Button();
+            this.PasswordUser = new System.Windows.Forms.TextBox();
+            this.LoginUser = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.GenerateKey = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.GenerateSecretKey = new System.Windows.Forms.Button();
             this.GenerateTotp = new System.Windows.Forms.Button();
+            this.GeneratePasswordStr = new System.Windows.Forms.TextBox();
+            this.GeneratePassword = new System.Windows.Forms.Button();
+            this.DefaultPassword = new System.Windows.Forms.TextBox();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // SupportRequest
@@ -50,11 +57,40 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.panel2.Controls.Add(this.ConnectButton);
+            this.panel2.Controls.Add(this.PasswordUser);
+            this.panel2.Controls.Add(this.LoginUser);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 56);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(195, 394);
             this.panel2.TabIndex = 5;
+            // 
+            // ConnectButton
+            // 
+            this.ConnectButton.Location = new System.Drawing.Point(12, 140);
+            this.ConnectButton.Name = "ConnectButton";
+            this.ConnectButton.Size = new System.Drawing.Size(170, 25);
+            this.ConnectButton.TabIndex = 13;
+            this.ConnectButton.Text = "GP";
+            this.ConnectButton.UseVisualStyleBackColor = true;
+            this.ConnectButton.Click += new System.EventHandler(this.ConnectButton_Click);
+            // 
+            // PasswordUser
+            // 
+            this.PasswordUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PasswordUser.Location = new System.Drawing.Point(12, 112);
+            this.PasswordUser.Name = "PasswordUser";
+            this.PasswordUser.Size = new System.Drawing.Size(170, 22);
+            this.PasswordUser.TabIndex = 14;
+            // 
+            // LoginUser
+            // 
+            this.LoginUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LoginUser.Location = new System.Drawing.Point(12, 84);
+            this.LoginUser.Name = "LoginUser";
+            this.LoginUser.Size = new System.Drawing.Size(170, 22);
+            this.LoginUser.TabIndex = 13;
             // 
             // panel1
             // 
@@ -105,12 +141,41 @@
             this.GenerateTotp.UseVisualStyleBackColor = true;
             this.GenerateTotp.Click += new System.EventHandler(this.GenerateTotp_Click);
             // 
+            // GeneratePasswordStr
+            // 
+            this.GeneratePasswordStr.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GeneratePasswordStr.Location = new System.Drawing.Point(618, 297);
+            this.GeneratePasswordStr.Name = "GeneratePasswordStr";
+            this.GeneratePasswordStr.Size = new System.Drawing.Size(170, 22);
+            this.GeneratePasswordStr.TabIndex = 10;
+            // 
+            // GeneratePassword
+            // 
+            this.GeneratePassword.Location = new System.Drawing.Point(561, 297);
+            this.GeneratePassword.Name = "GeneratePassword";
+            this.GeneratePassword.Size = new System.Drawing.Size(51, 50);
+            this.GeneratePassword.TabIndex = 11;
+            this.GeneratePassword.Text = "GP";
+            this.GeneratePassword.UseVisualStyleBackColor = true;
+            this.GeneratePassword.Click += new System.EventHandler(this.GeneratePassword_Click);
+            // 
+            // DefaultPassword
+            // 
+            this.DefaultPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DefaultPassword.Location = new System.Drawing.Point(618, 325);
+            this.DefaultPassword.Name = "DefaultPassword";
+            this.DefaultPassword.Size = new System.Drawing.Size(170, 22);
+            this.DefaultPassword.TabIndex = 12;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.DefaultPassword);
+            this.Controls.Add(this.GeneratePassword);
+            this.Controls.Add(this.GeneratePasswordStr);
             this.Controls.Add(this.GenerateTotp);
             this.Controls.Add(this.GenerateSecretKey);
             this.Controls.Add(this.textBox1);
@@ -121,8 +186,10 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Flame CRM";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,6 +204,12 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button GenerateSecretKey;
         private System.Windows.Forms.Button GenerateTotp;
+        private System.Windows.Forms.TextBox GeneratePasswordStr;
+        private System.Windows.Forms.Button GeneratePassword;
+        private System.Windows.Forms.TextBox DefaultPassword;
+        private System.Windows.Forms.Button ConnectButton;
+        private System.Windows.Forms.TextBox PasswordUser;
+        private System.Windows.Forms.TextBox LoginUser;
     }
 }
 
