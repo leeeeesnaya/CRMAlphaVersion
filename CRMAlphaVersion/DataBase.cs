@@ -4,7 +4,7 @@ namespace CRMAlphaVersion
 {
     class DataBase
     {
-        SqlConnection sqlConnection = new SqlConnection(@"Data Source=Styx;Initial Catalog=CRM;Integrated Security=True");
+        SqlConnection sqlConnection = new SqlConnection(@"Data Source=34.67.214.124,1433; Initial Catalog=CRMFlame; User ID=sqlserver; Password=1234;");
 
         public void OpenConnection()
         {

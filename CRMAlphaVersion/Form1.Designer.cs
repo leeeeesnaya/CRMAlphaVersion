@@ -74,7 +74,6 @@
             this.ConnectButton.TabIndex = 13;
             this.ConnectButton.Text = "GP";
             this.ConnectButton.UseVisualStyleBackColor = true;
-            this.ConnectButton.Click += new System.EventHandler(this.ConnectButton_Click);
             // 
             // PasswordUser
             // 
@@ -148,6 +147,7 @@
             this.GeneratePasswordStr.Name = "GeneratePasswordStr";
             this.GeneratePasswordStr.Size = new System.Drawing.Size(170, 22);
             this.GeneratePasswordStr.TabIndex = 10;
+            this.GeneratePasswordStr.TextChanged += new System.EventHandler(this.GeneratePasswordStr_TextChanged);
             // 
             // GeneratePassword
             // 

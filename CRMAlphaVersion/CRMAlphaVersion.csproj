@@ -91,18 +91,54 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activities.Designer.cs">
+      <DependentUpon>Activities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewUser.Designer.cs">
+      <DependentUpon>AddNewUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Authentication.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Authentication.Designer.cs">
       <DependentUpon>Authentication.cs</DependentUpon>
     </Compile>
+    <Compile Include="ColumnsSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColumnsSettingsForm.Designer.cs">
+      <DependentUpon>ColumnsSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract.Designer.cs">
+      <DependentUpon>Contract.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataBase.cs" />
+    <Compile Include="Leads.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Leads.Designer.cs">
+      <DependentUpon>Leads.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Deals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Deals.Designer.cs">
+      <DependentUpon>Deals.cs</DependentUpon>
     </Compile>
     <Compile Include="Loading.cs">
       <SubType>Form</SubType>
@@ -134,11 +170,32 @@
     <Compile Include="TestAuthenticator.Designer.cs">
       <DependentUpon>TestAuthenticator.cs</DependentUpon>
     </Compile>
+    <Compile Include="Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddNewUser.resx">
+      <DependentUpon>AddNewUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Authentication.resx">
       <DependentUpon>Authentication.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ColumnsSettingsForm.resx">
+      <DependentUpon>ColumnsSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract.resx">
+      <DependentUpon>Contract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Leads.resx">
+      <DependentUpon>Leads.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Deals.resx">
+      <DependentUpon>Deals.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>
@@ -160,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TestAuthenticator.resx">
       <DependentUpon>TestAuthenticator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

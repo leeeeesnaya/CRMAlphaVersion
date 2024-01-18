@@ -36,7 +36,8 @@ namespace CRMAlphaVersion
             textBox1.Text = licenseKey;
             Clipboard.SetText(textBox1.Text);
         }
-
+        //Отправка письмом внутри приложения (под вопросом). Возможность сделать небольшие уведомление или что-то подобное, для того
+        //Чтобы можно было отправить письмо с генерированным ключом.
         public static string GenerateLicenseKey()
         {
             int groupLength = 4;
@@ -63,7 +64,7 @@ namespace CRMAlphaVersion
             return keyBuilder.ToString();
         }
 
-
+        //Привязать под каждую учетную запись, сделать как второй этап входа в аккаунт и настроить правильное отображение.
         public class AuthenticatorService
         {
             private string GenerateSecretKey()
@@ -83,13 +84,14 @@ namespace CRMAlphaVersion
                 return totp.ComputeTotp();
             }
         }
-
         private void GenerateSecretKey_Click(object sender, EventArgs e)
         {
             TestAuthenticator newForm = new TestAuthenticator();
             newForm.Show();
         }
 
+
+        //Уже не помню для чего это, позже пересмотреть
         private void GenerateTotp_Click(object sender, EventArgs e)
         {
             string secretKey = "your-secret-key-here"; // Замените на реальный секретный ключ
@@ -97,6 +99,8 @@ namespace CRMAlphaVersion
             MessageBox.Show($"Generated TOTP: {totp}");
         }
 
+
+        //Генерация хэш пароля, используем также и для сброса пароля, позже и для задавания нового пароля пользователем
         private void GeneratePassword_Click(object sender, EventArgs e)
         {
             string salt = BCrypt.Net.BCrypt.GenerateSalt();
@@ -105,49 +109,9 @@ namespace CRMAlphaVersion
             GeneratePasswordStr.Text =  hashedPassword;
         }
 
-        private void ConnectButton_Click(object sender, EventArgs e)
+        private void GeneratePasswordStr_TextChanged(object sender, EventArgs e)
         {
-            var lgnUser = LoginUser.Text;
-            var passUser = PasswordUser.Text;
 
-            DataBase dataBase = new DataBase();
-
-            string storedHashedPassword = GetUserPasswordFromDatabase(dataBase, lgnUser);
-
-            if (storedHashedPassword != null && PasswordHasher.VerifyPassword(passUser, storedHashedPassword))
-            {
-                MessageBox.Show("Успех успешный", "Успешная авторизация", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Лох ебаный", "Авторизация отклонена", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private string GetUserPasswordFromDatabase(DataBase dataBase, string lgnUser)
-        {
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(dataBase.GetConnection().ConnectionString))
-                {
-                    connection.Open();
-
-                    string queryString = "SELECT PasswordUser FROM Users WHERE NameUser = @NameUser";
-                    using (SqlCommand command = new SqlCommand(queryString, connection))
-                    {
-                        command.Parameters.AddWithValue("@NameUser", lgnUser);
-
-                        object result = command.ExecuteScalar();
-
-                        return result != null ? result.ToString() : null;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Произошла ошибка при выполнении запроса: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return null;
-            }
         }
     }
 }

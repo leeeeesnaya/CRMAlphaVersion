@@ -5,6 +5,9 @@ namespace CRMAlphaVersion
 {
     public partial class Loading : Form
     {
+        public string UserName { get; set; }
+        public string UserPosition { get; set; }
+
         public Loading()
         {
             InitializeComponent();
@@ -22,7 +25,7 @@ namespace CRMAlphaVersion
             if(progressBar.Value == 100)
             {
                 timer1.Stop();
-                Main mainForm = new Main();
+                Main mainForm = new Main(UserName, UserPosition);
                 this.Hide();
                 mainForm.FormClosed += (s, args) => { this.Close(); };
                 mainForm.Show();

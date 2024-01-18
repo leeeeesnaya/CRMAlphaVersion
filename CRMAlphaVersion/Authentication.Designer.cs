@@ -33,7 +33,7 @@
             this.Email = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.rememberPassLog = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,6 +46,7 @@
             this.PasswordUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.PasswordUser.Location = new System.Drawing.Point(75, 295);
             this.PasswordUser.Name = "PasswordUser";
+            this.PasswordUser.PasswordChar = '*';
             this.PasswordUser.Size = new System.Drawing.Size(325, 29);
             this.PasswordUser.TabIndex = 17;
             // 
@@ -88,16 +89,16 @@
             this.label2.TabIndex = 21;
             this.label2.Text = "Forgot Password";
             // 
-            // checkBox1
+            // rememberPassLog
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.checkBox1.Location = new System.Drawing.Point(75, 335);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(162, 20);
-            this.checkBox1.TabIndex = 22;
-            this.checkBox1.Text = "Remember for 30 days";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.rememberPassLog.AutoSize = true;
+            this.rememberPassLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.rememberPassLog.Location = new System.Drawing.Point(75, 335);
+            this.rememberPassLog.Name = "rememberPassLog";
+            this.rememberPassLog.Size = new System.Drawing.Size(162, 20);
+            this.rememberPassLog.TabIndex = 22;
+            this.rememberPassLog.Text = "Remember for 30 days";
+            this.rememberPassLog.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -171,13 +172,14 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.rememberPassLog);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Email);
             this.Controls.Add(this.ConnectButton);
             this.Controls.Add(this.PasswordUser);
             this.Controls.Add(this.LoginUser);
+            this.MaximizeBox = false;
             this.Name = "Authentication";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Flame CRM";
@@ -194,7 +196,7 @@
         private System.Windows.Forms.Label Email;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox rememberPassLog;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
