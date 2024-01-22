@@ -32,71 +32,97 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.UsersPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.settingColumn = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.counteragent = new Guna.UI2.WinForms.Guna2Button();
+            this.settingsButton = new Guna.UI2.WinForms.Guna2Button();
+            this.filterButton = new Guna.UI2.WinForms.Guna2Button();
             this.Birhday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codeEDRPOY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewDeals = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Added = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameOrganization = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientOrganizationName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewOrganizations = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.UsersPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrganizations)).BeginInit();
+            this.CodeEDRPOY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CloseData = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDeals)).BeginInit();
             this.SuspendLayout();
             // 
-            // UsersPanel
+            // guna2Panel1
             // 
-            this.UsersPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.UsersPanel.Controls.Add(this.settingColumn);
-            this.UsersPanel.Controls.Add(this.guna2Button1);
-            this.UsersPanel.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.UsersPanel.Location = new System.Drawing.Point(0, 0);
-            this.UsersPanel.Name = "UsersPanel";
-            this.UsersPanel.Size = new System.Drawing.Size(1015, 65);
-            this.UsersPanel.TabIndex = 2;
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.guna2Panel1.Controls.Add(this.counteragent);
+            this.guna2Panel1.Controls.Add(this.settingsButton);
+            this.guna2Panel1.Controls.Add(this.filterButton);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1015, 65);
+            this.guna2Panel1.TabIndex = 12;
             // 
-            // settingColumn
+            // counteragent
             // 
-            this.settingColumn.BorderColor = System.Drawing.Color.Gray;
-            this.settingColumn.BorderThickness = 1;
-            this.settingColumn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.settingColumn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.settingColumn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.settingColumn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.settingColumn.FillColor = System.Drawing.Color.Transparent;
-            this.settingColumn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.settingColumn.ForeColor = System.Drawing.Color.Black;
-            this.settingColumn.Image = ((System.Drawing.Image)(resources.GetObject("settingColumn.Image")));
-            this.settingColumn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.settingColumn.ImageOffset = new System.Drawing.Point(2, 0);
-            this.settingColumn.Location = new System.Drawing.Point(780, 15);
-            this.settingColumn.Name = "settingColumn";
-            this.settingColumn.Size = new System.Drawing.Size(110, 35);
-            this.settingColumn.TabIndex = 6;
-            this.settingColumn.Text = "Setting";
-            this.settingColumn.Click += new System.EventHandler(this.settingColumn_Click);
+            this.counteragent.Animated = true;
+            this.counteragent.BorderColor = System.Drawing.Color.Gray;
+            this.counteragent.BorderThickness = 1;
+            this.counteragent.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.counteragent.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.counteragent.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.counteragent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.counteragent.FillColor = System.Drawing.Color.Transparent;
+            this.counteragent.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.counteragent.ForeColor = System.Drawing.Color.Black;
+            this.counteragent.Image = ((System.Drawing.Image)(resources.GetObject("counteragent.Image")));
+            this.counteragent.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.counteragent.Location = new System.Drawing.Point(665, 15);
+            this.counteragent.Name = "counteragent";
+            this.counteragent.Size = new System.Drawing.Size(110, 35);
+            this.counteragent.TabIndex = 10;
+            this.counteragent.Text = "Новий контракт";
+            this.counteragent.TextOffset = new System.Drawing.Point(15, 0);
             // 
-            // guna2Button1
+            // settingsButton
             // 
-            this.guna2Button1.BorderColor = System.Drawing.Color.Gray;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.ImageOffset = new System.Drawing.Point(2, 0);
-            this.guna2Button1.Location = new System.Drawing.Point(896, 15);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(110, 35);
-            this.guna2Button1.TabIndex = 5;
-            this.guna2Button1.Text = "Filter";
+            this.settingsButton.Animated = true;
+            this.settingsButton.BorderColor = System.Drawing.Color.Gray;
+            this.settingsButton.BorderThickness = 1;
+            this.settingsButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.settingsButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.settingsButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.settingsButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.settingsButton.FillColor = System.Drawing.Color.Transparent;
+            this.settingsButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.settingsButton.ForeColor = System.Drawing.Color.Black;
+            this.settingsButton.Image = ((System.Drawing.Image)(resources.GetObject("settingsButton.Image")));
+            this.settingsButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.settingsButton.ImageOffset = new System.Drawing.Point(2, 0);
+            this.settingsButton.Location = new System.Drawing.Point(780, 15);
+            this.settingsButton.Name = "settingsButton";
+            this.settingsButton.Size = new System.Drawing.Size(110, 35);
+            this.settingsButton.TabIndex = 8;
+            this.settingsButton.Text = "Setting";
+            // 
+            // filterButton
+            // 
+            this.filterButton.Animated = true;
+            this.filterButton.BorderColor = System.Drawing.Color.Gray;
+            this.filterButton.BorderThickness = 1;
+            this.filterButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.filterButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.filterButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.filterButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.filterButton.FillColor = System.Drawing.Color.Transparent;
+            this.filterButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.filterButton.ForeColor = System.Drawing.Color.Black;
+            this.filterButton.Image = ((System.Drawing.Image)(resources.GetObject("filterButton.Image")));
+            this.filterButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.filterButton.ImageOffset = new System.Drawing.Point(2, 0);
+            this.filterButton.Location = new System.Drawing.Point(895, 15);
+            this.filterButton.Name = "filterButton";
+            this.filterButton.Size = new System.Drawing.Size(110, 35);
+            this.filterButton.TabIndex = 7;
+            this.filterButton.Text = "Filter";
             // 
             // Birhday
             // 
@@ -107,63 +133,13 @@
             this.Birhday.ReadOnly = true;
             this.Birhday.Width = 125;
             // 
-            // codeEDRPOY
+            // dataGridViewDeals
             // 
-            this.codeEDRPOY.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.codeEDRPOY.FillWeight = 0.9127185F;
-            this.codeEDRPOY.HeaderText = "Код ЄДРПОУ";
-            this.codeEDRPOY.MinimumWidth = 50;
-            this.codeEDRPOY.Name = "codeEDRPOY";
-            this.codeEDRPOY.ReadOnly = true;
-            this.codeEDRPOY.Width = 200;
-            // 
-            // Email
-            // 
-            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Email.FillWeight = 120.9578F;
-            this.Email.HeaderText = "Email";
-            this.Email.MinimumWidth = 50;
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            this.Email.Width = 225;
-            // 
-            // Phone
-            // 
-            this.Phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Phone.FillWeight = 46.61516F;
-            this.Phone.HeaderText = "Номер мобільного телефону";
-            this.Phone.MinimumWidth = 50;
-            this.Phone.Name = "Phone";
-            this.Phone.ReadOnly = true;
-            this.Phone.Width = 200;
-            // 
-            // Address
-            // 
-            this.Address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Address.FillWeight = 5.781145F;
-            this.Address.HeaderText = "Адреса";
-            this.Address.MinimumWidth = 75;
-            this.Address.Name = "Address";
-            this.Address.ReadOnly = true;
-            this.Address.Width = 250;
-            // 
-            // clientOrganizationName
-            // 
-            this.clientOrganizationName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.clientOrganizationName.FillWeight = 18.31213F;
-            this.clientOrganizationName.HeaderText = "Найменування контрагента";
-            this.clientOrganizationName.MinimumWidth = 150;
-            this.clientOrganizationName.Name = "clientOrganizationName";
-            this.clientOrganizationName.ReadOnly = true;
-            this.clientOrganizationName.Width = 250;
-            // 
-            // dataGridViewOrganizations
-            // 
-            this.dataGridViewOrganizations.AllowUserToAddRows = false;
-            this.dataGridViewOrganizations.AllowUserToOrderColumns = true;
+            this.dataGridViewDeals.AllowUserToAddRows = false;
+            this.dataGridViewDeals.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dataGridViewOrganizations.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewOrganizations.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridViewDeals.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewDeals.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -173,15 +149,17 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.AppWorkspace;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewOrganizations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewOrganizations.ColumnHeadersHeight = 40;
-            this.dataGridViewOrganizations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dataGridViewOrganizations.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clientOrganizationName,
-            this.Address,
-            this.Phone,
+            this.dataGridViewDeals.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewDeals.ColumnHeadersHeight = 40;
+            this.dataGridViewDeals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGridViewDeals.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Added,
+            this.NameOrganization,
             this.Email,
-            this.codeEDRPOY});
+            this.CodeEDRPOY,
+            this.Amount,
+            this.Stage,
+            this.CloseData});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -189,65 +167,142 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewOrganizations.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewOrganizations.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.dataGridViewOrganizations.Location = new System.Drawing.Point(20, 71);
-            this.dataGridViewOrganizations.Name = "dataGridViewOrganizations";
-            this.dataGridViewOrganizations.ReadOnly = true;
-            this.dataGridViewOrganizations.RowHeadersVisible = false;
-            this.dataGridViewOrganizations.RowTemplate.Height = 40;
-            this.dataGridViewOrganizations.Size = new System.Drawing.Size(985, 600);
-            this.dataGridViewOrganizations.TabIndex = 3;
-            this.dataGridViewOrganizations.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dataGridViewOrganizations.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dataGridViewOrganizations.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dataGridViewOrganizations.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dataGridViewOrganizations.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dataGridViewOrganizations.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dataGridViewOrganizations.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.dataGridViewOrganizations.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.dataGridViewOrganizations.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridViewOrganizations.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataGridViewOrganizations.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.DimGray;
-            this.dataGridViewOrganizations.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dataGridViewOrganizations.ThemeStyle.HeaderStyle.Height = 40;
-            this.dataGridViewOrganizations.ThemeStyle.ReadOnly = true;
-            this.dataGridViewOrganizations.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dataGridViewOrganizations.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dataGridViewOrganizations.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataGridViewOrganizations.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dataGridViewOrganizations.ThemeStyle.RowsStyle.Height = 40;
-            this.dataGridViewOrganizations.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGridViewOrganizations.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataGridViewDeals.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewDeals.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.dataGridViewDeals.Location = new System.Drawing.Point(18, 71);
+            this.dataGridViewDeals.Name = "dataGridViewDeals";
+            this.dataGridViewDeals.ReadOnly = true;
+            this.dataGridViewDeals.RowHeadersVisible = false;
+            this.dataGridViewDeals.RowTemplate.Height = 40;
+            this.dataGridViewDeals.Size = new System.Drawing.Size(985, 600);
+            this.dataGridViewDeals.TabIndex = 11;
+            this.dataGridViewDeals.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridViewDeals.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dataGridViewDeals.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dataGridViewDeals.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dataGridViewDeals.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dataGridViewDeals.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridViewDeals.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.dataGridViewDeals.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.dataGridViewDeals.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridViewDeals.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataGridViewDeals.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.DimGray;
+            this.dataGridViewDeals.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGridViewDeals.ThemeStyle.HeaderStyle.Height = 40;
+            this.dataGridViewDeals.ThemeStyle.ReadOnly = true;
+            this.dataGridViewDeals.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridViewDeals.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridViewDeals.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataGridViewDeals.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataGridViewDeals.ThemeStyle.RowsStyle.Height = 40;
+            this.dataGridViewDeals.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridViewDeals.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // Leads
+            // Added
+            // 
+            this.Added.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Added.FillWeight = 5.781145F;
+            this.Added.HeaderText = "Хто додав";
+            this.Added.MinimumWidth = 150;
+            this.Added.Name = "Added";
+            this.Added.ReadOnly = true;
+            this.Added.ToolTipText = "Поле, яке показує нам, хто додав нового ліда";
+            this.Added.Width = 175;
+            // 
+            // NameOrganization
+            // 
+            this.NameOrganization.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.NameOrganization.FillWeight = 18.31213F;
+            this.NameOrganization.HeaderText = "Найменування ліда";
+            this.NameOrganization.MinimumWidth = 150;
+            this.NameOrganization.Name = "NameOrganization";
+            this.NameOrganization.ReadOnly = true;
+            this.NameOrganization.ToolTipText = "Показує нам повне найменування ліда/контрагента";
+            this.NameOrganization.Width = 200;
+            // 
+            // Email
+            // 
+            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Email.FillWeight = 46.61516F;
+            this.Email.HeaderText = "Email";
+            this.Email.MinimumWidth = 75;
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.ToolTipText = "Показує поштову скриньку ліда/контрагента";
+            // 
+            // CodeEDRPOY
+            // 
+            this.CodeEDRPOY.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.CodeEDRPOY.FillWeight = 120.9578F;
+            this.CodeEDRPOY.HeaderText = "Код ЄДРПОУ";
+            this.CodeEDRPOY.MinimumWidth = 100;
+            this.CodeEDRPOY.Name = "CodeEDRPOY";
+            this.CodeEDRPOY.ReadOnly = true;
+            this.CodeEDRPOY.ToolTipText = "Показує код ЄДРПОУ ліда/контрагента";
+            this.CodeEDRPOY.Width = 110;
+            // 
+            // Amount
+            // 
+            this.Amount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Amount.FillWeight = 0.9127185F;
+            this.Amount.HeaderText = "Сума договору";
+            this.Amount.MinimumWidth = 100;
+            this.Amount.Name = "Amount";
+            this.Amount.ReadOnly = true;
+            this.Amount.ToolTipText = "Показує суму договору (в ₴)";
+            this.Amount.Width = 125;
+            // 
+            // Stage
+            // 
+            this.Stage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Stage.HeaderText = "Етап контрактування";
+            this.Stage.MinimumWidth = 150;
+            this.Stage.Name = "Stage";
+            this.Stage.ReadOnly = true;
+            this.Stage.ToolTipText = "Показує на якому зараз етапі цей лід/контрагент";
+            this.Stage.Width = 150;
+            // 
+            // CloseData
+            // 
+            this.CloseData.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.CloseData.HeaderText = "Дата закінчення договору";
+            this.CloseData.MinimumWidth = 150;
+            this.CloseData.Name = "CloseData";
+            this.CloseData.ReadOnly = true;
+            this.CloseData.ToolTipText = "Показує дію договору (без часу)";
+            this.CloseData.Width = 150;
+            // 
+            // Deals
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1015, 700);
-            this.Controls.Add(this.UsersPanel);
-            this.Controls.Add(this.dataGridViewOrganizations);
+            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.dataGridViewDeals);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Leads";
-            this.Text = "Leads";
-            this.UsersPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrganizations)).EndInit();
+            this.Name = "Deals";
+            this.Text = "Deals";
+            this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDeals)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel UsersPanel;
-        private Guna.UI2.WinForms.Guna2Button settingColumn;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Button counteragent;
+        private Guna.UI2.WinForms.Guna2Button settingsButton;
+        private Guna.UI2.WinForms.Guna2Button filterButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn Birhday;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codeEDRPOY;
+        private Guna.UI2.WinForms.Guna2DataGridView dataGridViewDeals;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Added;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameOrganization;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clientOrganizationName;
-        private Guna.UI2.WinForms.Guna2DataGridView dataGridViewOrganizations;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodeEDRPOY;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CloseData;
     }
 }

@@ -136,5 +136,10 @@ namespace CRMAlphaVersion
                 return null;
             }
         }
+
+        private void LoginUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

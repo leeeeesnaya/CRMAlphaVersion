@@ -48,6 +48,10 @@ namespace CRMAlphaVersion
             main.Show();
         }
 
+        private void clientorganizationButton_Click(object sender, EventArgs e)
+        {
+            container(new Organizations());
+        }
         private void LeadsButton_Click(object sender, EventArgs e)
         {
             container(new Leads());
@@ -60,12 +64,12 @@ namespace CRMAlphaVersion
 
         private void ActivitiesButton_Click(object sender, EventArgs e)
         {
-            container(new Users());
+            container(new Activities());
         }
 
         private void ContractButton_Click(object sender, EventArgs e)
         {
-            container(new Users());
+            container(new Contract());
         }
 
         private void UsersButton_Click(object sender, System.EventArgs e)

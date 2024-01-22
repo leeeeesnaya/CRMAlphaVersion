@@ -62,9 +62,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(25, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 32);
+            this.label1.Size = new System.Drawing.Size(324, 32);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Add New Employee";
+            this.label1.Text = "Додати нового користувача";
             // 
             // organization
             // 
@@ -102,7 +102,8 @@
             this.firstName.Location = new System.Drawing.Point(25, 140);
             this.firstName.Name = "firstName";
             this.firstName.PasswordChar = '\0';
-            this.firstName.PlaceholderText = "";
+            this.firstName.PlaceholderForeColor = System.Drawing.Color.DarkOrange;
+            this.firstName.PlaceholderText = "Повне ім\'я користувача";
             this.firstName.SelectedText = "";
             this.firstName.Size = new System.Drawing.Size(250, 35);
             this.firstName.TabIndex = 3;
@@ -145,11 +146,11 @@
             this.mobilePhoneUser.MaxLength = 12;
             this.mobilePhoneUser.Name = "mobilePhoneUser";
             this.mobilePhoneUser.PasswordChar = '\0';
-            this.mobilePhoneUser.PlaceholderText = "";
+            this.mobilePhoneUser.PlaceholderForeColor = System.Drawing.Color.DarkOrange;
+            this.mobilePhoneUser.PlaceholderText = "+380668889900";
             this.mobilePhoneUser.SelectedText = "";
             this.mobilePhoneUser.Size = new System.Drawing.Size(225, 35);
             this.mobilePhoneUser.TabIndex = 7;
-            this.mobilePhoneUser.TextChanged += new System.EventHandler(this.mobilePhoneUser_TextChanged);
             // 
             // emailaddress
             // 
@@ -177,7 +178,8 @@
             this.Email.Location = new System.Drawing.Point(25, 220);
             this.Email.Name = "Email";
             this.Email.PasswordChar = '\0';
-            this.Email.PlaceholderText = "";
+            this.Email.PlaceholderForeColor = System.Drawing.Color.DarkOrange;
+            this.Email.PlaceholderText = "test@gmail.com";
             this.Email.SelectedText = "";
             this.Email.Size = new System.Drawing.Size(406, 36);
             this.Email.TabIndex = 9;
@@ -205,10 +207,11 @@
             this.passwordUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.passwordUser.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.passwordUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.passwordUser.Location = new System.Drawing.Point(25, 295);
+            this.passwordUser.Location = new System.Drawing.Point(26, 295);
             this.passwordUser.Name = "passwordUser";
             this.passwordUser.PasswordChar = '\0';
-            this.passwordUser.PlaceholderText = "";
+            this.passwordUser.PlaceholderForeColor = System.Drawing.Color.DarkOrange;
+            this.passwordUser.PlaceholderText = "66pV,CA#x8P3";
             this.passwordUser.SelectedText = "";
             this.passwordUser.Size = new System.Drawing.Size(406, 36);
             this.passwordUser.TabIndex = 11;
@@ -221,7 +224,6 @@
             this.organizationUser.Name = "organizationUser";
             this.organizationUser.Size = new System.Drawing.Size(200, 25);
             this.organizationUser.TabIndex = 13;
-            this.organizationUser.SelectedIndexChanged += new System.EventHandler(this.organizationUser_SelectedIndexChanged);
             // 
             // positionUser
             // 
@@ -287,11 +289,11 @@
             this.secondName.Location = new System.Drawing.Point(285, 140);
             this.secondName.Name = "secondName";
             this.secondName.PasswordChar = '\0';
-            this.secondName.PlaceholderText = "";
+            this.secondName.PlaceholderForeColor = System.Drawing.Color.DarkOrange;
+            this.secondName.PlaceholderText = "Прізвище користувача";
             this.secondName.SelectedText = "";
             this.secondName.Size = new System.Drawing.Size(250, 35);
             this.secondName.TabIndex = 19;
-            this.secondName.TextChanged += new System.EventHandler(this.secondName_TextChanged);
             // 
             // Surname
             // 
@@ -329,11 +331,11 @@
             this.thirdName.Location = new System.Drawing.Point(545, 140);
             this.thirdName.Name = "thirdName";
             this.thirdName.PasswordChar = '\0';
-            this.thirdName.PlaceholderText = "";
+            this.thirdName.PlaceholderForeColor = System.Drawing.Color.DarkOrange;
+            this.thirdName.PlaceholderText = "По-батькові користувача";
             this.thirdName.SelectedText = "";
             this.thirdName.Size = new System.Drawing.Size(250, 35);
             this.thirdName.TabIndex = 21;
-            this.thirdName.TextChanged += new System.EventHandler(this.thirdName_TextChanged);
             // 
             // birthdayUser
             // 
@@ -343,6 +345,7 @@
             // 
             // saveButton
             // 
+            this.saveButton.Animated = true;
             this.saveButton.BorderColor = System.Drawing.Color.Gray;
             this.saveButton.BorderThickness = 1;
             this.saveButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -359,12 +362,13 @@
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(150, 50);
             this.saveButton.TabIndex = 25;
-            this.saveButton.Text = "Save";
+            this.saveButton.Text = "Додати";
             this.saveButton.TextOffset = new System.Drawing.Point(7, 0);
             this.saveButton.Click += new System.EventHandler(this.addUser_Click);
             // 
             // anotherButton
             // 
+            this.anotherButton.Animated = true;
             this.anotherButton.BorderColor = System.Drawing.Color.Gray;
             this.anotherButton.BorderThickness = 1;
             this.anotherButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -381,12 +385,13 @@
             this.anotherButton.Name = "anotherButton";
             this.anotherButton.Size = new System.Drawing.Size(150, 50);
             this.anotherButton.TabIndex = 26;
-            this.anotherButton.Text = "Save and another";
+            this.anotherButton.Text = "Додати ще одного";
             this.anotherButton.TextOffset = new System.Drawing.Point(7, 0);
             this.anotherButton.Click += new System.EventHandler(this.anotherButton_Click);
             // 
             // cancelButton
             // 
+            this.cancelButton.Animated = true;
             this.cancelButton.BorderColor = System.Drawing.Color.Gray;
             this.cancelButton.BorderThickness = 1;
             this.cancelButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -403,7 +408,7 @@
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(150, 50);
             this.cancelButton.TabIndex = 27;
-            this.cancelButton.Text = "Cancel";
+            this.cancelButton.Text = "Відмініти";
             this.cancelButton.TextOffset = new System.Drawing.Point(7, 0);
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
@@ -437,7 +442,6 @@
             this.Controls.Add(this.anotherButton);
             this.Controls.Add(this.saveButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-           
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddNewUser";
             this.Load += new System.EventHandler(this.AddNewUser_Load);

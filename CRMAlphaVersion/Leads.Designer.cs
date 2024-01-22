@@ -37,7 +37,6 @@
             this.settingsButton = new Guna.UI2.WinForms.Guna2Button();
             this.filterButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.quantityUsers = new System.Windows.Forms.Label();
             this.dataGridViewUsers = new Guna.UI2.WinForms.Guna2DataGridView();
             this.NameUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClientOrganizationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,6 +58,7 @@
             // 
             // counteragent
             // 
+            this.counteragent.Animated = true;
             this.counteragent.BorderColor = System.Drawing.Color.Gray;
             this.counteragent.BorderThickness = 1;
             this.counteragent.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -76,9 +76,11 @@
             this.counteragent.TabIndex = 10;
             this.counteragent.Text = "Новий Контрагент";
             this.counteragent.TextOffset = new System.Drawing.Point(15, 0);
+            this.counteragent.Click += new System.EventHandler(this.counteragent_Click);
             // 
             // settingsButton
             // 
+            this.settingsButton.Animated = true;
             this.settingsButton.BorderColor = System.Drawing.Color.Gray;
             this.settingsButton.BorderThickness = 1;
             this.settingsButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -100,6 +102,7 @@
             // 
             // filterButton
             // 
+            this.filterButton.Animated = true;
             this.filterButton.BorderColor = System.Drawing.Color.Gray;
             this.filterButton.BorderThickness = 1;
             this.filterButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -117,29 +120,18 @@
             this.filterButton.Size = new System.Drawing.Size(110, 35);
             this.filterButton.TabIndex = 7;
             this.filterButton.Text = "Filter";
-            this.filterButton.Click += new System.EventHandler(this.filterButton_Click);
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.guna2Panel1.Controls.Add(this.counteragent);
             this.guna2Panel1.Controls.Add(this.settingsButton);
             this.guna2Panel1.Controls.Add(this.filterButton);
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 15);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1015, 65);
             this.guna2Panel1.TabIndex = 10;
-            // 
-            // quantityUsers
-            // 
-            this.quantityUsers.AutoSize = true;
-            this.quantityUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.quantityUsers.ForeColor = System.Drawing.Color.DarkOrange;
-            this.quantityUsers.Location = new System.Drawing.Point(15, 30);
-            this.quantityUsers.Name = "quantityUsers";
-            this.quantityUsers.Size = new System.Drawing.Size(49, 33);
-            this.quantityUsers.TabIndex = 7;
-            this.quantityUsers.Text = "75";
             // 
             // dataGridViewUsers
             // 
@@ -175,7 +167,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewUsers.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewUsers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.dataGridViewUsers.Location = new System.Drawing.Point(20, 86);
+            this.dataGridViewUsers.Location = new System.Drawing.Point(20, 71);
             this.dataGridViewUsers.Name = "dataGridViewUsers";
             this.dataGridViewUsers.ReadOnly = true;
             this.dataGridViewUsers.RowHeadersVisible = false;
@@ -254,21 +246,20 @@
             this.CreateDate.ReadOnly = true;
             this.CreateDate.Width = 175;
             // 
-            // Deals
+            // Leads
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1015, 700);
             this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.quantityUsers);
             this.Controls.Add(this.dataGridViewUsers);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Deals";
+            this.Name = "Leads";
             this.Text = "Deals";
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -278,7 +269,6 @@
         private Guna.UI2.WinForms.Guna2Button settingsButton;
         private Guna.UI2.WinForms.Guna2Button filterButton;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Label quantityUsers;
         private Guna.UI2.WinForms.Guna2DataGridView dataGridViewUsers;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameUser;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClientOrganizationID;

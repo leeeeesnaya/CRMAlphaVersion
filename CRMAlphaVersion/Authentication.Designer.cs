@@ -57,6 +57,7 @@
             this.LoginUser.Name = "LoginUser";
             this.LoginUser.Size = new System.Drawing.Size(325, 29);
             this.LoginUser.TabIndex = 16;
+            this.LoginUser.TextChanged += new System.EventHandler(this.LoginUser_TextChanged);
             // 
             // Email
             // 

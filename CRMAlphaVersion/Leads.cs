@@ -96,7 +96,7 @@ namespace CRMAlphaVersion
             mainForm.Show();
         }
 
-        private void filterButton_Click(object sender, EventArgs e)
+        private void counteragent_Click(object sender, EventArgs e)
         {
 
         }

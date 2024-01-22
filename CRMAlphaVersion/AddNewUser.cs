@@ -203,10 +203,6 @@ namespace CRMAlphaVersion
             this.Close();
         }
 
-        private void organizationUser_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
         private void anotherButton_Click(object sender, EventArgs e)
         {
             addNewUser();
@@ -234,21 +230,6 @@ namespace CRMAlphaVersion
         private void firstName_TextChanged(object sender, EventArgs e)
         {
             textKeyPress(sender, new KeyPressEventArgs('\0'));
-        }
-
-        private void secondName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void thirdName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mobilePhoneUser_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

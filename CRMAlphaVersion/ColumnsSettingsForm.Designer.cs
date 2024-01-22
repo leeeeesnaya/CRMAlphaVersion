@@ -48,6 +48,7 @@
             // 
             // resetColumnSettings
             // 
+            this.resetColumnSettings.Animated = true;
             this.resetColumnSettings.BorderColor = System.Drawing.Color.Gray;
             this.resetColumnSettings.BorderThickness = 1;
             this.resetColumnSettings.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -69,6 +70,7 @@
             // 
             // buttonApplySettings
             // 
+            this.buttonApplySettings.Animated = true;
             this.buttonApplySettings.BorderColor = System.Drawing.Color.Gray;
             this.buttonApplySettings.BorderThickness = 1;
             this.buttonApplySettings.DisabledState.BorderColor = System.Drawing.Color.DarkGray;

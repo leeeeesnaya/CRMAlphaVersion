@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.FirstLabel = new System.Windows.Forms.Label();
             this.SecondLabel = new System.Windows.Forms.Label();
@@ -48,7 +49,7 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.MainPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.clientorganizationButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -58,6 +59,7 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.clientorganizationButton);
             this.guna2Panel1.Controls.Add(this.panel1);
             this.guna2Panel1.Controls.Add(this.UsersButton);
             this.guna2Panel1.Controls.Add(this.ContractButton);
@@ -84,6 +86,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(195, 135);
             this.panel1.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(37, 111);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 16);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Need some help?";
             // 
             // guna2CirclePictureBox1
             // 
@@ -130,7 +143,7 @@
             this.UsersButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.UsersButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.UsersButton.FillColor = System.Drawing.Color.Transparent;
-            this.UsersButton.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.UsersButton.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9.75F);
             this.UsersButton.ForeColor = System.Drawing.Color.Black;
             this.UsersButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.UsersButton.HoverState.FillColor = System.Drawing.Color.Navy;
@@ -138,7 +151,7 @@
             this.UsersButton.Image = ((System.Drawing.Image)(resources.GetObject("UsersButton.Image")));
             this.UsersButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.UsersButton.ImageOffset = new System.Drawing.Point(10, 0);
-            this.UsersButton.Location = new System.Drawing.Point(0, 270);
+            this.UsersButton.Location = new System.Drawing.Point(0, 330);
             this.UsersButton.Name = "UsersButton";
             this.UsersButton.Size = new System.Drawing.Size(195, 40);
             this.UsersButton.TabIndex = 8;
@@ -155,7 +168,7 @@
             this.ContractButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.ContractButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.ContractButton.FillColor = System.Drawing.Color.Transparent;
-            this.ContractButton.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ContractButton.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9.75F);
             this.ContractButton.ForeColor = System.Drawing.Color.Black;
             this.ContractButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.ContractButton.HoverState.FillColor = System.Drawing.Color.Navy;
@@ -163,7 +176,7 @@
             this.ContractButton.Image = ((System.Drawing.Image)(resources.GetObject("ContractButton.Image")));
             this.ContractButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.ContractButton.ImageOffset = new System.Drawing.Point(10, 0);
-            this.ContractButton.Location = new System.Drawing.Point(0, 225);
+            this.ContractButton.Location = new System.Drawing.Point(0, 285);
             this.ContractButton.Name = "ContractButton";
             this.ContractButton.Size = new System.Drawing.Size(195, 40);
             this.ContractButton.TabIndex = 4;
@@ -180,7 +193,7 @@
             this.ActivitiesButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.ActivitiesButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.ActivitiesButton.FillColor = System.Drawing.Color.Transparent;
-            this.ActivitiesButton.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ActivitiesButton.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9.75F);
             this.ActivitiesButton.ForeColor = System.Drawing.Color.Black;
             this.ActivitiesButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.ActivitiesButton.HoverState.FillColor = System.Drawing.Color.Navy;
@@ -188,7 +201,7 @@
             this.ActivitiesButton.Image = ((System.Drawing.Image)(resources.GetObject("ActivitiesButton.Image")));
             this.ActivitiesButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.ActivitiesButton.ImageOffset = new System.Drawing.Point(10, 0);
-            this.ActivitiesButton.Location = new System.Drawing.Point(0, 180);
+            this.ActivitiesButton.Location = new System.Drawing.Point(0, 240);
             this.ActivitiesButton.Name = "ActivitiesButton";
             this.ActivitiesButton.Size = new System.Drawing.Size(195, 40);
             this.ActivitiesButton.TabIndex = 3;
@@ -205,7 +218,7 @@
             this.DealsButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.DealsButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.DealsButton.FillColor = System.Drawing.Color.Transparent;
-            this.DealsButton.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DealsButton.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9.75F);
             this.DealsButton.ForeColor = System.Drawing.Color.Black;
             this.DealsButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.DealsButton.HoverState.FillColor = System.Drawing.Color.Navy;
@@ -213,7 +226,7 @@
             this.DealsButton.Image = ((System.Drawing.Image)(resources.GetObject("DealsButton.Image")));
             this.DealsButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.DealsButton.ImageOffset = new System.Drawing.Point(10, 0);
-            this.DealsButton.Location = new System.Drawing.Point(0, 135);
+            this.DealsButton.Location = new System.Drawing.Point(0, 195);
             this.DealsButton.Name = "DealsButton";
             this.DealsButton.Size = new System.Drawing.Size(195, 40);
             this.DealsButton.TabIndex = 2;
@@ -230,7 +243,7 @@
             this.LeadsButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.LeadsButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.LeadsButton.FillColor = System.Drawing.Color.Transparent;
-            this.LeadsButton.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LeadsButton.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9.75F);
             this.LeadsButton.ForeColor = System.Drawing.Color.Black;
             this.LeadsButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.LeadsButton.HoverState.FillColor = System.Drawing.Color.Navy;
@@ -238,7 +251,7 @@
             this.LeadsButton.Image = ((System.Drawing.Image)(resources.GetObject("LeadsButton.Image")));
             this.LeadsButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.LeadsButton.ImageOffset = new System.Drawing.Point(10, 0);
-            this.LeadsButton.Location = new System.Drawing.Point(0, 90);
+            this.LeadsButton.Location = new System.Drawing.Point(0, 150);
             this.LeadsButton.Name = "LeadsButton";
             this.LeadsButton.Size = new System.Drawing.Size(195, 40);
             this.LeadsButton.TabIndex = 1;
@@ -286,12 +299,12 @@
             this.searchTextBox.IconLeft = ((System.Drawing.Image)(resources.GetObject("searchTextBox.IconLeft")));
             this.searchTextBox.IconLeftOffset = new System.Drawing.Point(5, 0);
             this.searchTextBox.IconLeftSize = new System.Drawing.Size(15, 15);
-            this.searchTextBox.Location = new System.Drawing.Point(585, 15);
+            this.searchTextBox.Location = new System.Drawing.Point(500, 15);
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.PasswordChar = '\0';
             this.searchTextBox.PlaceholderText = "Пошук";
             this.searchTextBox.SelectedText = "";
-            this.searchTextBox.Size = new System.Drawing.Size(200, 35);
+            this.searchTextBox.Size = new System.Drawing.Size(265, 35);
             this.searchTextBox.TabIndex = 3;
             this.searchTextBox.TextOffset = new System.Drawing.Point(3, 0);
             // 
@@ -341,16 +354,30 @@
             this.MainPanel.Size = new System.Drawing.Size(1039, 639);
             this.MainPanel.TabIndex = 2;
             // 
-            // label1
+            // clientorganizationButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(37, 111);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 16);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Need some help?";
+            this.clientorganizationButton.BackColor = System.Drawing.Color.White;
+            this.clientorganizationButton.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 8);
+            this.clientorganizationButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.clientorganizationButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.clientorganizationButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.clientorganizationButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.clientorganizationButton.FillColor = System.Drawing.Color.Transparent;
+            this.clientorganizationButton.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9.75F);
+            this.clientorganizationButton.ForeColor = System.Drawing.Color.Black;
+            this.clientorganizationButton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.clientorganizationButton.HoverState.FillColor = System.Drawing.Color.Navy;
+            this.clientorganizationButton.HoverState.ForeColor = System.Drawing.Color.White;
+            this.clientorganizationButton.Image = ((System.Drawing.Image)(resources.GetObject("clientorganizationButton.Image")));
+            this.clientorganizationButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.clientorganizationButton.ImageOffset = new System.Drawing.Point(10, 0);
+            this.clientorganizationButton.Location = new System.Drawing.Point(0, 105);
+            this.clientorganizationButton.Name = "clientorganizationButton";
+            this.clientorganizationButton.Size = new System.Drawing.Size(195, 40);
+            this.clientorganizationButton.TabIndex = 10;
+            this.clientorganizationButton.Text = "Клієнти";
+            this.clientorganizationButton.TextOffset = new System.Drawing.Point(10, 0);
+            this.clientorganizationButton.Click += new System.EventHandler(this.clientorganizationButton_Click);
             // 
             // Main
             // 
@@ -396,5 +423,6 @@
         private Guna.UI2.WinForms.Guna2Button UsersButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Button clientorganizationButton;
     }
 }

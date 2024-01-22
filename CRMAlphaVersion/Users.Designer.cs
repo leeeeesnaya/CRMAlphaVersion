@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Users));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Users));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.addUser = new Guna.UI2.WinForms.Guna2Button();
+            this.quantity = new System.Windows.Forms.Label();
             this.settingsButton = new Guna.UI2.WinForms.Guna2Button();
             this.filterButton = new Guna.UI2.WinForms.Guna2Button();
             this.Birhday = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,14 +43,12 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewUsers = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.quantity = new System.Windows.Forms.Label();
             this.StatusAcc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmailUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UsersID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhoneUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Birthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addUser = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
             this.SuspendLayout();
@@ -65,8 +65,43 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1015, 65);
             this.guna2Panel1.TabIndex = 3;
             // 
+            // addUser
+            // 
+            this.addUser.Animated = true;
+            this.addUser.BorderColor = System.Drawing.Color.Gray;
+            this.addUser.BorderThickness = 1;
+            this.addUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.addUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.addUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.addUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.addUser.FillColor = System.Drawing.Color.Transparent;
+            this.addUser.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.addUser.ForeColor = System.Drawing.Color.Black;
+            this.addUser.Image = ((System.Drawing.Image)(resources.GetObject("addUser.Image")));
+            this.addUser.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.addUser.ImageOffset = new System.Drawing.Point(2, 0);
+            this.addUser.Location = new System.Drawing.Point(665, 15);
+            this.addUser.Name = "addUser";
+            this.addUser.Size = new System.Drawing.Size(110, 35);
+            this.addUser.TabIndex = 10;
+            this.addUser.Text = "New User";
+            this.addUser.TextOffset = new System.Drawing.Point(7, 0);
+            this.addUser.Click += new System.EventHandler(this.addUser_Click);
+            // 
+            // quantity
+            // 
+            this.quantity.AutoSize = true;
+            this.quantity.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.quantity.Location = new System.Drawing.Point(15, 15);
+            this.quantity.Name = "quantity";
+            this.quantity.Size = new System.Drawing.Size(78, 32);
+            this.quantity.TabIndex = 9;
+            this.quantity.Text = "label2";
+            // 
             // settingsButton
             // 
+            this.settingsButton.Animated = true;
             this.settingsButton.BorderColor = System.Drawing.Color.Gray;
             this.settingsButton.BorderThickness = 1;
             this.settingsButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -88,6 +123,7 @@
             // 
             // filterButton
             // 
+            this.filterButton.Animated = true;
             this.filterButton.BorderColor = System.Drawing.Color.Gray;
             this.filterButton.BorderThickness = 1;
             this.filterButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -242,17 +278,6 @@
             this.dataGridViewUsers.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dataGridViewUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUsers_CellContentClick);
             // 
-            // quantity
-            // 
-            this.quantity.AutoSize = true;
-            this.quantity.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.quantity.Location = new System.Drawing.Point(15, 15);
-            this.quantity.Name = "quantity";
-            this.quantity.Size = new System.Drawing.Size(78, 32);
-            this.quantity.TabIndex = 9;
-            this.quantity.Text = "label2";
-            // 
             // StatusAcc
             // 
             this.StatusAcc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -306,28 +331,6 @@
             this.Birthday.Name = "Birthday";
             this.Birthday.ReadOnly = true;
             this.Birthday.Width = 355;
-            // 
-            // addUser
-            // 
-            this.addUser.BorderColor = System.Drawing.Color.Gray;
-            this.addUser.BorderThickness = 1;
-            this.addUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.addUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.addUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.addUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.addUser.FillColor = System.Drawing.Color.Transparent;
-            this.addUser.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.addUser.ForeColor = System.Drawing.Color.Black;
-            this.addUser.Image = ((System.Drawing.Image)(resources.GetObject("addUser.Image")));
-            this.addUser.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.addUser.ImageOffset = new System.Drawing.Point(2, 0);
-            this.addUser.Location = new System.Drawing.Point(665, 15);
-            this.addUser.Name = "addUser";
-            this.addUser.Size = new System.Drawing.Size(110, 35);
-            this.addUser.TabIndex = 10;
-            this.addUser.Text = "New User";
-            this.addUser.TextOffset = new System.Drawing.Point(7, 0);
-            this.addUser.Click += new System.EventHandler(this.addUser_Click);
             // 
             // Users
             // 
