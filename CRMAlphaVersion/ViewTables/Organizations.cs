@@ -4,6 +4,7 @@ using System.Data;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Drawing;
+using CRMAlphaVersion.AddNewRecord;
 
 namespace CRMAlphaVersion
 {
@@ -85,6 +86,12 @@ namespace CRMAlphaVersion
         private void UsersPanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void addNewOrganization_Click(object sender, EventArgs e)
+        {
+            AddNewOrganizations addNewOrganizations = new AddNewOrganizations();
+            addNewOrganizations.ShowDialog();
         }
     }
 }

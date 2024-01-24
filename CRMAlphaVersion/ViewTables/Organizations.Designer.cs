@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Organizations));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Organizations));
             this.UsersPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.settingColumn = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.filterTable = new Guna.UI2.WinForms.Guna2Button();
             this.Birhday = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codeEDRPOY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +42,7 @@
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clientOrganizationName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewOrganizations = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.addNewOrganization = new Guna.UI2.WinForms.Guna2Button();
             this.UsersPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrganizations)).BeginInit();
             this.SuspendLayout();
@@ -49,8 +50,9 @@
             // UsersPanel
             // 
             this.UsersPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.UsersPanel.Controls.Add(this.addNewOrganization);
             this.UsersPanel.Controls.Add(this.settingColumn);
-            this.UsersPanel.Controls.Add(this.guna2Button1);
+            this.UsersPanel.Controls.Add(this.filterTable);
             this.UsersPanel.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.UsersPanel.Location = new System.Drawing.Point(0, 0);
             this.UsersPanel.Name = "UsersPanel";
@@ -80,26 +82,26 @@
             this.settingColumn.Text = "Setting";
             this.settingColumn.Click += new System.EventHandler(this.settingColumn_Click);
             // 
-            // guna2Button1
+            // filterTable
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.BorderColor = System.Drawing.Color.Gray;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.ImageOffset = new System.Drawing.Point(2, 0);
-            this.guna2Button1.Location = new System.Drawing.Point(896, 15);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(110, 35);
-            this.guna2Button1.TabIndex = 5;
-            this.guna2Button1.Text = "Filter";
+            this.filterTable.Animated = true;
+            this.filterTable.BorderColor = System.Drawing.Color.Gray;
+            this.filterTable.BorderThickness = 1;
+            this.filterTable.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.filterTable.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.filterTable.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.filterTable.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.filterTable.FillColor = System.Drawing.Color.Transparent;
+            this.filterTable.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.filterTable.ForeColor = System.Drawing.Color.Black;
+            this.filterTable.Image = ((System.Drawing.Image)(resources.GetObject("filterTable.Image")));
+            this.filterTable.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.filterTable.ImageOffset = new System.Drawing.Point(2, 0);
+            this.filterTable.Location = new System.Drawing.Point(896, 15);
+            this.filterTable.Name = "filterTable";
+            this.filterTable.Size = new System.Drawing.Size(110, 35);
+            this.filterTable.TabIndex = 5;
+            this.filterTable.Text = "Filter";
             // 
             // Birhday
             // 
@@ -223,6 +225,28 @@
             this.dataGridViewOrganizations.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataGridViewOrganizations.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // addNewOrganization
+            // 
+            this.addNewOrganization.Animated = true;
+            this.addNewOrganization.BorderColor = System.Drawing.Color.Gray;
+            this.addNewOrganization.BorderThickness = 1;
+            this.addNewOrganization.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.addNewOrganization.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.addNewOrganization.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.addNewOrganization.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.addNewOrganization.FillColor = System.Drawing.Color.Transparent;
+            this.addNewOrganization.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.addNewOrganization.ForeColor = System.Drawing.Color.Black;
+            this.addNewOrganization.Image = ((System.Drawing.Image)(resources.GetObject("addNewOrganization.Image")));
+            this.addNewOrganization.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.addNewOrganization.Location = new System.Drawing.Point(664, 15);
+            this.addNewOrganization.Name = "addNewOrganization";
+            this.addNewOrganization.Size = new System.Drawing.Size(110, 35);
+            this.addNewOrganization.TabIndex = 7;
+            this.addNewOrganization.Text = "Нова організація";
+            this.addNewOrganization.TextOffset = new System.Drawing.Point(9, 0);
+            this.addNewOrganization.Click += new System.EventHandler(this.addNewOrganization_Click);
+            // 
             // Organizations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,7 +268,7 @@
 
         private Guna.UI2.WinForms.Guna2Panel UsersPanel;
         private Guna.UI2.WinForms.Guna2Button settingColumn;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button filterTable;
         private System.Windows.Forms.DataGridViewTextBoxColumn Birhday;
         private System.Windows.Forms.DataGridViewTextBoxColumn codeEDRPOY;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
@@ -252,5 +276,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
         private System.Windows.Forms.DataGridViewTextBoxColumn clientOrganizationName;
         private Guna.UI2.WinForms.Guna2DataGridView dataGridViewOrganizations;
+        private Guna.UI2.WinForms.Guna2Button addNewOrganization;
     }
 }

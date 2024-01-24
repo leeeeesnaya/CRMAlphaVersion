@@ -81,6 +81,7 @@
             this.counteragent.TabIndex = 10;
             this.counteragent.Text = "Новий контракт";
             this.counteragent.TextOffset = new System.Drawing.Point(15, 0);
+            this.counteragent.Click += new System.EventHandler(this.counteragent_Click);
             // 
             // settingsButton
             // 

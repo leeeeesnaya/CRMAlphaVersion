@@ -1,21 +1,23 @@
-﻿using System;
-using System.Data.SqlClient;
+﻿using CRMAlphaVersion.AddNewRecord;
+using System;
 using System.Data;
+using System.Data.SqlClient;
 using System.Windows.Forms;
-using System.Collections.Generic;
-using System.Drawing;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace CRMAlphaVersion
 {
     public partial class Deals : Form
     {
-        private DataBase database;
-        public Deals()
+        public string UserName { get; set; }
+        DataBase database;
+
+        public Deals(string userName)
         {
             InitializeComponent();
             Controls.Add(dataGridViewDeals);
             database = new DataBase();
+            UserName = userName;
             LoadDataToDataGridView();
         }
 
@@ -24,11 +26,11 @@ namespace CRMAlphaVersion
             try
             {
                 database.OpenConnection();
-                string query = "SELECT U.NameUser, C.ClientOrganizationName, C.Email, C.CodeEDRPOY, D.Amount, D.Stage, D.CloseDate\r\n" +
-                    "FROM Deals D\r\n" +
-                    "JOIN Users U ON D.UserID = U.UsersID\r\n" +
-                    "JOIN ClientOrganizations C ON D.ClientOrganizationID = C.ClientOrganizationID\r\n" +
-                    "WHERE D.LeadID IN (SELECT LeadID FROM Leads);\r\n";
+                string query = "SELECT U.NameUser, CO.ClientOrganizationName, CO.Email, CO.CodeEDRPOY, D.Amount, D.Stage, D.CloseDate\r\n" +
+                    "FROM Deals D \r\n" +
+                    "Join Users U ON D.UserID = U.UsersID\r\n" +
+                    "JOIN Leads L ON D.LeadID = L.LeadID\r\n" +
+                    "JOIN ClientOrganizations CO ON L.ClientOrganizationID = CO.ClientOrganizationID;";
 
                 using (SqlDataAdapter dataAdapter = new SqlDataAdapter(query, database.GetConnection()))
                 {
@@ -93,6 +95,12 @@ namespace CRMAlphaVersion
             this.Hide();
             mainForm.FormClosed += (s, args) => { this.Close(); };
             mainForm.Show();
+        }
+
+        private void counteragent_Click(object sender, EventArgs e)
+        {
+            AddNewDeals addNewDeals = new AddNewDeals(UserName);
+            addNewDeals.ShowDialog();
         }
     }
 }

@@ -231,5 +231,20 @@ namespace CRMAlphaVersion
         {
             textKeyPress(sender, new KeyPressEventArgs('\0'));
         }
+
+        private void secondName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void organizationUser_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void birthdayUser_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
+        }
     }
 }

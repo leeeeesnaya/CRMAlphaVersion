@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data;
-using System.Data.SqlClient;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -34,10 +33,10 @@ namespace CRMAlphaVersion
                 MessageBox.Show("UserName is not initialized!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
+
         private void container(object _form)
         {
-            if(MainPanel.Controls.Count > 0) MainPanel.Controls.Clear();
+            if (MainPanel.Controls.Count > 0) MainPanel.Controls.Clear();
 
             Form main = _form as Form;
             main.TopLevel = false;
@@ -54,12 +53,12 @@ namespace CRMAlphaVersion
         }
         private void LeadsButton_Click(object sender, EventArgs e)
         {
-            container(new Leads());
+            container(new Leads(UserName));
         }
 
         private void DealsButton_Click(object sender, EventArgs e)
         {
-            container(new Deals());
+            container(new Deals(UserName));
         }
 
         private void ActivitiesButton_Click(object sender, EventArgs e)

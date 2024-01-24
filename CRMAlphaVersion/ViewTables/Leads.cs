@@ -5,19 +5,21 @@ using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Drawing;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using CRMAlphaVersion.AddNewRecord;
 
 namespace CRMAlphaVersion
 {
     public partial class Leads : Form
     {
+        public string UserName { get; set; }
         private DataBase database;
-        public Leads()
+        public Leads(string userName)
         {
             InitializeComponent();
-            Controls.Add(dataGridViewUsers);
+            Controls.Add(dataGridViewLeads);
 
             database = new DataBase();
-
+            UserName = userName;
             LoadDataToDataGridView();
         }
 
@@ -43,7 +45,7 @@ namespace CRMAlphaVersion
 
                         foreach (DataRow row in dataSet.Tables["Leads"].Rows)
                         {
-                            dataGridViewUsers.Rows.Add(
+                            dataGridViewLeads.Rows.Add(
                                 row["NameUser"],
                                 row["ClientOrganizationName"],
                                 row["Status"],
@@ -81,7 +83,7 @@ namespace CRMAlphaVersion
 
                 if (columnsSettingsForm.ShowDialog() == DialogResult.OK)
                 {
-                    foreach (DataGridViewColumn column in dataGridViewUsers.Columns)
+                    foreach (DataGridViewColumn column in dataGridViewLeads.Columns)
                     {
                         column.Visible = columnsSettingsForm.SelectedColumns.Contains(column.Name);
                     }
@@ -98,7 +100,8 @@ namespace CRMAlphaVersion
 
         private void counteragent_Click(object sender, EventArgs e)
         {
-
+            AddNewLeads addNewLeads = new AddNewLeads(UserName);
+            addNewLeads.ShowDialog(); 
         }
     }
 }

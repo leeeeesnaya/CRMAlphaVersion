@@ -36,7 +36,7 @@ namespace CRMAlphaVersion
                         {
                             if (reader.Read())
                             {
-                                // Получаем содержимое файла из базы данных
+                                // Получение содержимого файла из БД
                                 fileContent = (byte[])reader["FileData"];
                             }
                         }
@@ -45,7 +45,7 @@ namespace CRMAlphaVersion
             }
             catch (Exception ex)
             {
-                // Обработка ошибок, например, логирование
+                // Обработка ошибок
                 Console.WriteLine("Ошибка при чтении файла из базы данных: " + ex.Message);
             }
 
@@ -80,11 +80,12 @@ namespace CRMAlphaVersion
         {
             try
             {
-                // Используем процесс для открытия файла с помощью программы Word
+                // Открытие файла docx в программе Word
                 Process.Start("WINWORD.EXE", filePath);
             }
             catch (Exception ex)
             {
+                // Обработка ошибок
                 Console.WriteLine($"Ошибка при открытии файла в Word: {ex.Message}");
             }
         }

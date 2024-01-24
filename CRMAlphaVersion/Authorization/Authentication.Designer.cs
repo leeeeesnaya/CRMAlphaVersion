@@ -38,7 +38,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.ConnectButton = new CRMAlphaVersion.RoundButton();
+            this.connectButton = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // PasswordUser
@@ -144,31 +144,27 @@
             this.label6.TabIndex = 26;
             this.label6.Text = "Sign up";
             // 
-            // ConnectButton
+            // connectButton
             // 
-            this.ConnectButton.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.ConnectButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.ConnectButton.BorderColor = System.Drawing.Color.Plum;
-            this.ConnectButton.BorderRadius = 7;
-            this.ConnectButton.BorderSize = 0;
-            this.ConnectButton.FlatAppearance.BorderSize = 0;
-            this.ConnectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ConnectButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.ConnectButton.ForeColor = System.Drawing.Color.White;
-            this.ConnectButton.Location = new System.Drawing.Point(75, 365);
-            this.ConnectButton.Name = "ConnectButton";
-            this.ConnectButton.Size = new System.Drawing.Size(325, 40);
-            this.ConnectButton.TabIndex = 18;
-            this.ConnectButton.Text = "Sign In";
-            this.ConnectButton.TextColor = System.Drawing.Color.White;
-            this.ConnectButton.UseVisualStyleBackColor = false;
-            this.ConnectButton.Click += new System.EventHandler(this.ConnectButton_Click);
+            this.connectButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.connectButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.connectButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.connectButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.connectButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.connectButton.ForeColor = System.Drawing.Color.White;
+            this.connectButton.Location = new System.Drawing.Point(75, 367);
+            this.connectButton.Name = "connectButton";
+            this.connectButton.Size = new System.Drawing.Size(329, 45);
+            this.connectButton.TabIndex = 27;
+            this.connectButton.Text = "Sign In";
+            this.connectButton.Click += new System.EventHandler(this.ConnectButton_Click);
             // 
             // Authentication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.connectButton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -177,7 +173,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Email);
-            this.Controls.Add(this.ConnectButton);
             this.Controls.Add(this.PasswordUser);
             this.Controls.Add(this.LoginUser);
             this.MaximizeBox = false;
@@ -193,7 +188,6 @@
         #endregion
         private System.Windows.Forms.TextBox PasswordUser;
         private System.Windows.Forms.TextBox LoginUser;
-        private RoundButton ConnectButton;
         private System.Windows.Forms.Label Email;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -202,5 +196,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2Button connectButton;
     }
 }
