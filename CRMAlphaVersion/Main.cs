@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -21,6 +22,10 @@ namespace CRMAlphaVersion
             InitializeOthersLabels();
         }
 
+        public Main()
+        {
+        }
+
         private void InitializeOthersLabels()
         {
             if (!string.IsNullOrEmpty(UserName) && !string.IsNullOrEmpty(UserPosition))
@@ -34,7 +39,7 @@ namespace CRMAlphaVersion
             }
         }
 
-        private void container(object _form)
+        public void container(object _form)
         {
             if (MainPanel.Controls.Count > 0) MainPanel.Controls.Clear();
 
@@ -75,6 +80,7 @@ namespace CRMAlphaVersion
         {
             container(new Users());
         }
+
 
         //Временно не работает, сделать позже, пока что в приоритете таблицы
         private void searchTextBox_TextChanged(object sender, EventArgs e)

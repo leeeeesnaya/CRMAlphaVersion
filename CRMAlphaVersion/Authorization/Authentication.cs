@@ -14,8 +14,42 @@ namespace CRMAlphaVersion
         public Authentication()
         {
             InitializeComponent();
+            testMethod();
         }
 
+        private void testMethod()
+        {
+            // Получаем хэш пароля из базы данных
+            string storedHashedPassword = "$2a$11$wbXEh5NOUNcf7tf8Nu6y3e.4n/C68qKpzpFDCNQbegQSsQ6J8Irrm";
+
+            // Пользователь вводит пароль
+            string enteredPassword = "password123";
+
+            // Проверяем введенный пароль
+            bool isPasswordValid = PasswordHasher.VerifyPassword(enteredPassword, storedHashedPassword);
+
+            // Если пароль верный, авторизуем пользователя
+            if (isPasswordValid)
+            {
+                // Пароль верный
+                Console.WriteLine("Пароль верный. Вход выполнен.");
+            }
+            else
+            {
+                // Пароль неверный
+                Console.WriteLine("Неверный пароль. Попробуйте еще раз.");
+            }
+        }
+
+        private void method2()
+        {
+            
+            //Хеширование пароля пользователя
+            string salt = BCrypt.Net.BCrypt.GenerateSalt();
+            string password = BCrypt.Net.BCrypt.HashPassword(textBoxPASS.Text, salt);
+
+            textBoxHASH.Text = password;
+        }
 
         private void Authentication_Load(object sender, EventArgs e)
         {
@@ -140,6 +174,11 @@ namespace CRMAlphaVersion
         private void LoginUser_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ButtonClck_Click(object sender, EventArgs e)
+        {
+            method2();
         }
     }
 }

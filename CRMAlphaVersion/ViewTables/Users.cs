@@ -1,10 +1,10 @@
-﻿using System;
-using System.Data.SqlClient;
-using System.Data;
-using System.Windows.Forms;
+﻿using CRMAlphaVersion.UpdateRecord;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Windows.Forms;
 
 namespace CRMAlphaVersion
 {
@@ -12,18 +12,17 @@ namespace CRMAlphaVersion
     {
         private DataBase database;
         public event EventHandler SearchTextChanged;
+        public int SelectedUserID { get; set; }
         public Users()
         {
             InitializeComponent();
             Controls.Add(dataGridViewUsers);
-
             database = new DataBase();
 
             LoadDataToDataGridView();
-            //QuantityUser();
         }
 
-        private void LoadDataToDataGridView()
+        public void LoadDataToDataGridView()
         {
             try
             {
@@ -60,48 +59,6 @@ namespace CRMAlphaVersion
             }
         }
 
-        //private void QuantityUser()
-        //{
-        //    quantity.Text = string.Empty;
-        //    try
-        //    {
-        //        database.OpenConnection();
-
-        //        string query = "SELECT COUNT(*) AS UserCount FROM Users WHERE DataProviderOrganizationID = @DataProviderOrganizationID";
-
-        //        using (SqlCommand command = new SqlCommand(query, database.GetConnection()))
-        //        {
-        //            // Предположим, что у вас есть свойство UserID для хранения текущего пользователя
-        //            // и DataProviderOrganizationID, чтобы получить организацию пользователя
-        //            int currentUserID = GetCurrentUser().UserID;
-        //            int organizationID = GetUserOrganizationID(currentUserID);
-
-        //            command.Parameters.AddWithValue("@DataProviderOrganizationID", organizationID);
-
-        //            object result = command.ExecuteScalar();
-
-        //            if (result != null)
-        //            {
-        //                int userCount = Convert.ToInt32(result);
-        //                MessageBox.Show($"Количество пользователей в вашей организации: {userCount}");
-        //            }
-        //            else
-        //            {
-        //                MessageBox.Show("Не удалось получить данные.");
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Ошибка выполнения запроса: " + ex.Message);
-        //    }
-        //    finally
-        //    {
-        //        database.CloseConnection();
-        //    }
-
-        //}
-
         private void settingColumn_Click(object sender, EventArgs e)
         {
             List<string> allColumns = new List<string>
@@ -127,15 +84,50 @@ namespace CRMAlphaVersion
                 }
             }
         }
-
-        private void dataGridViewUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridUsers_MouseDown(object sender, MouseEventArgs e)
         {
-
+            menuUser.Show(dataGridViewUsers, e.Location);
         }
 
         private void addUser_Click(object sender, EventArgs e)
         {
             AddNewUser mainForm = new AddNewUser();
+            this.Hide();
+            mainForm.FormClosed += (s, args) => { this.Close(); };
+            mainForm.Show();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            accept mainForm = new accept(SelectedUserID);
+            mainForm.Show();
+        }
+
+        private void dataGridViewUsers_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Проверяем, что двойной щелчок произошел внутри строки
+            if (e.RowIndex >= 0)
+            {
+                // Получаем выбранную строку
+                DataGridViewRow selectedRow = dataGridViewUsers.Rows[e.RowIndex];
+
+                // Получаем идентификатор пользователя из выбранной строки
+                int userID = Convert.ToInt32(selectedRow.Cells["UsersID"].Value);
+
+                // Устанавливаем этот идентификатор в контекстном меню
+                updateToolStripMenuItem.Tag = userID;
+                deleteToolStripMenuItem.Tag = userID;
+                SelectedUserID = userID;
+
+                // Отображаем контекстное меню рядом с курсором мыши
+                menuUser.Show(Cursor.Position);
+                Console.WriteLine(userID);
+            }
+        }
+
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateUser mainForm = new UpdateUser(SelectedUserID, this);
             this.Hide();
             mainForm.FormClosed += (s, args) => { this.Close(); };
             mainForm.Show();

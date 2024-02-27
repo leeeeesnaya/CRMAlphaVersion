@@ -114,6 +114,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="accept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="accept.Designer.cs">
+      <DependentUpon>accept.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddNewRecord\AddNewContracts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,38 @@
     </Compile>
     <Compile Include="AddNewRecord\AddNewOrganizations.Designer.cs">
       <DependentUpon>AddNewOrganizations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts Delete\deleteScriptUser.cs" />
+    <Compile Include="Scripts Update\updateScriptUser.cs" />
+    <Compile Include="UpdateRecord\UpdateContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateRecord\UpdateContract.Designer.cs">
+      <DependentUpon>UpdateContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRecord\UpdateDeals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateRecord\UpdateDeals.Designer.cs">
+      <DependentUpon>UpdateDeals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRecord\UpdateLeads.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateRecord\UpdateLeads.Designer.cs">
+      <DependentUpon>UpdateLeads.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRecord\UpdateOrganization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateRecord\UpdateOrganization.Designer.cs">
+      <DependentUpon>UpdateOrganization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRecord\UpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateRecord\UpdateUser.Designer.cs">
+      <DependentUpon>UpdateUser.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewTables\Activities.cs">
       <SubType>Form</SubType>
@@ -228,6 +266,9 @@
     <Compile Include="ViewTables\Users.Designer.cs">
       <DependentUpon>Users.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="accept.resx">
+      <DependentUpon>accept.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddNewRecord\AddNewContracts.resx">
       <DependentUpon>AddNewContracts.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddNewRecord\AddNewOrganizations.resx">
       <DependentUpon>AddNewOrganizations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRecord\UpdateUser.resx">
+      <DependentUpon>UpdateUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewTables\Activities.resx">
       <DependentUpon>Activities.cs</DependentUpon>
@@ -305,6 +349,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

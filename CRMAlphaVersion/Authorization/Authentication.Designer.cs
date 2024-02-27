@@ -39,6 +39,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.connectButton = new Guna.UI2.WinForms.Guna2Button();
+            this.ButtonClck = new Guna.UI2.WinForms.Guna2Button();
+            this.textBoxPASS = new System.Windows.Forms.TextBox();
+            this.textBoxHASH = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // PasswordUser
@@ -159,11 +162,45 @@
             this.connectButton.Text = "Sign In";
             this.connectButton.Click += new System.EventHandler(this.ConnectButton_Click);
             // 
+            // ButtonClck
+            // 
+            this.ButtonClck.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ButtonClck.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ButtonClck.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ButtonClck.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ButtonClck.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ButtonClck.ForeColor = System.Drawing.Color.White;
+            this.ButtonClck.Location = new System.Drawing.Point(524, 344);
+            this.ButtonClck.Name = "ButtonClck";
+            this.ButtonClck.Size = new System.Drawing.Size(329, 45);
+            this.ButtonClck.TabIndex = 30;
+            this.ButtonClck.Text = "Sign In";
+            this.ButtonClck.Click += new System.EventHandler(this.ButtonClck_Click);
+            // 
+            // textBoxPASS
+            // 
+            this.textBoxPASS.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxPASS.Location = new System.Drawing.Point(524, 230);
+            this.textBoxPASS.Name = "textBoxPASS";
+            this.textBoxPASS.Size = new System.Drawing.Size(325, 29);
+            this.textBoxPASS.TabIndex = 28;
+            // 
+            // textBoxHASH
+            // 
+            this.textBoxHASH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxHASH.Location = new System.Drawing.Point(528, 295);
+            this.textBoxHASH.Name = "textBoxHASH";
+            this.textBoxHASH.Size = new System.Drawing.Size(325, 29);
+            this.textBoxHASH.TabIndex = 31;
+            // 
             // Authentication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.textBoxHASH);
+            this.Controls.Add(this.ButtonClck);
+            this.Controls.Add(this.textBoxPASS);
             this.Controls.Add(this.connectButton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -197,5 +234,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2Button connectButton;
+        private Guna.UI2.WinForms.Guna2Button ButtonClck;
+        private System.Windows.Forms.TextBox textBoxPASS;
+        private System.Windows.Forms.TextBox textBoxHASH;
     }
 }

@@ -32,12 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.Birthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UsersID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmailUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StatusAcc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhoneUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Birhday = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addUser = new Guna.UI2.WinForms.Guna2Button();
             this.settingsButton = new Guna.UI2.WinForms.Guna2Button();
@@ -46,63 +40,19 @@
             this.quantityUsers = new System.Windows.Forms.Label();
             this.dataGridViewContracts = new Guna.UI2.WinForms.Guna2DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.оновитиДанніToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.видалитиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ClientOrganizationName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ContractNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CreatedBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CreatedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ContractStartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ContractEndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContracts)).BeginInit();
+            this.guna2ContextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // Birthday
-            // 
-            this.Birthday.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Birthday.FillWeight = 200.4169F;
-            this.Birthday.HeaderText = "Дата народження";
-            this.Birthday.Name = "Birthday";
-            this.Birthday.ReadOnly = true;
-            this.Birthday.Width = 355;
-            // 
-            // NameUser
-            // 
-            this.NameUser.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.NameUser.FillWeight = 120.9578F;
-            this.NameUser.HeaderText = "Ім\'я працівника";
-            this.NameUser.Name = "NameUser";
-            this.NameUser.ReadOnly = true;
-            this.NameUser.Width = 225;
-            // 
-            // UsersID
-            // 
-            this.UsersID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.UsersID.FillWeight = 46.61516F;
-            this.UsersID.HeaderText = "Код працівника";
-            this.UsersID.Name = "UsersID";
-            this.UsersID.ReadOnly = true;
-            this.UsersID.Width = 75;
-            // 
-            // EmailUser
-            // 
-            this.EmailUser.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.EmailUser.FillWeight = 5.781145F;
-            this.EmailUser.HeaderText = "Email";
-            this.EmailUser.Name = "EmailUser";
-            this.EmailUser.ReadOnly = true;
-            this.EmailUser.Width = 95;
-            // 
-            // StatusAcc
-            // 
-            this.StatusAcc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.StatusAcc.FillWeight = 18.31213F;
-            this.StatusAcc.HeaderText = "Статус";
-            this.StatusAcc.Name = "StatusAcc";
-            this.StatusAcc.ReadOnly = true;
-            this.StatusAcc.Width = 85;
-            // 
-            // PhoneUser
-            // 
-            this.PhoneUser.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.PhoneUser.FillWeight = 0.9127185F;
-            this.PhoneUser.HeaderText = "Номер телефону";
-            this.PhoneUser.Name = "PhoneUser";
-            this.PhoneUser.ReadOnly = true;
-            this.PhoneUser.Width = 125;
             // 
             // Birhday
             // 
@@ -218,12 +168,12 @@
             this.dataGridViewContracts.ColumnHeadersHeight = 40;
             this.dataGridViewContracts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dataGridViewContracts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.StatusAcc,
-            this.EmailUser,
-            this.UsersID,
-            this.NameUser,
-            this.PhoneUser,
-            this.Birthday});
+            this.ClientOrganizationName,
+            this.ContractNumber,
+            this.CreatedBy,
+            this.CreatedDate,
+            this.ContractStartDate,
+            this.ContractEndDate});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -266,6 +216,90 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // guna2ContextMenuStrip1
+            // 
+            this.guna2ContextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.оновитиДанніToolStripMenuItem,
+            this.видалитиToolStripMenuItem});
+            this.guna2ContextMenuStrip1.Name = "guna2ContextMenuStrip1";
+            this.guna2ContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.ColorTable = null;
+            this.guna2ContextMenuStrip1.RenderStyle.RoundedEdges = true;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(155, 48);
+            // 
+            // оновитиДанніToolStripMenuItem
+            // 
+            this.оновитиДанніToolStripMenuItem.Name = "оновитиДанніToolStripMenuItem";
+            this.оновитиДанніToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.оновитиДанніToolStripMenuItem.Text = "Оновити данні";
+            this.оновитиДанніToolStripMenuItem.Click += new System.EventHandler(this.оновитиДанніToolStripMenuItem_Click);
+            // 
+            // видалитиToolStripMenuItem
+            // 
+            this.видалитиToolStripMenuItem.Name = "видалитиToolStripMenuItem";
+            this.видалитиToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.видалитиToolStripMenuItem.Text = "Видалити";
+            // 
+            // ClientOrganizationName
+            // 
+            this.ClientOrganizationName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ClientOrganizationName.FillWeight = 18.31213F;
+            this.ClientOrganizationName.HeaderText = "Найменування організації";
+            this.ClientOrganizationName.Name = "ClientOrganizationName";
+            this.ClientOrganizationName.ReadOnly = true;
+            this.ClientOrganizationName.Width = 85;
+            // 
+            // ContractNumber
+            // 
+            this.ContractNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ContractNumber.FillWeight = 5.781145F;
+            this.ContractNumber.HeaderText = "Номер контракту";
+            this.ContractNumber.Name = "ContractNumber";
+            this.ContractNumber.ReadOnly = true;
+            this.ContractNumber.Width = 95;
+            // 
+            // CreatedBy
+            // 
+            this.CreatedBy.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.CreatedBy.FillWeight = 46.61516F;
+            this.CreatedBy.HeaderText = "Створено (ким)";
+            this.CreatedBy.Name = "CreatedBy";
+            this.CreatedBy.ReadOnly = true;
+            this.CreatedBy.Width = 75;
+            // 
+            // CreatedDate
+            // 
+            this.CreatedDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.CreatedDate.FillWeight = 120.9578F;
+            this.CreatedDate.HeaderText = "Дата створення";
+            this.CreatedDate.Name = "CreatedDate";
+            this.CreatedDate.ReadOnly = true;
+            this.CreatedDate.Width = 225;
+            // 
+            // ContractStartDate
+            // 
+            this.ContractStartDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ContractStartDate.FillWeight = 0.9127185F;
+            this.ContractStartDate.HeaderText = "Початок дії контракту";
+            this.ContractStartDate.Name = "ContractStartDate";
+            this.ContractStartDate.ReadOnly = true;
+            this.ContractStartDate.Width = 125;
+            // 
+            // ContractEndDate
+            // 
+            this.ContractEndDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ContractEndDate.FillWeight = 200.4169F;
+            this.ContractEndDate.HeaderText = "Дата закінчення дії контратку";
+            this.ContractEndDate.Name = "ContractEndDate";
+            this.ContractEndDate.ReadOnly = true;
+            this.ContractEndDate.Width = 355;
+            // 
             // Contract
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,19 +315,13 @@
             this.Load += new System.EventHandler(this.Contract_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContracts)).EndInit();
+            this.guna2ContextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridViewTextBoxColumn Birthday;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NameUser;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UsersID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmailUser;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StatusAcc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PhoneUser;
         private System.Windows.Forms.DataGridViewTextBoxColumn Birhday;
         private Guna.UI2.WinForms.Guna2Button addUser;
         private Guna.UI2.WinForms.Guna2Button settingsButton;
@@ -302,5 +330,14 @@
         private System.Windows.Forms.Label quantityUsers;
         private Guna.UI2.WinForms.Guna2DataGridView dataGridViewContracts;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem оновитиДанніToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem видалитиToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClientOrganizationName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ContractNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CreatedBy;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CreatedDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ContractStartDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ContractEndDate;
     }
 }

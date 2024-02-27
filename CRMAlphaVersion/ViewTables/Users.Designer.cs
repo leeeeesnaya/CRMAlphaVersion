@@ -49,8 +49,12 @@
             this.NameUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhoneUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Birthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuUser = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
+            this.menuUser.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -276,7 +280,7 @@
             this.dataGridViewUsers.ThemeStyle.RowsStyle.Height = 40;
             this.dataGridViewUsers.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataGridViewUsers.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dataGridViewUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUsers_CellContentClick);
+            this.dataGridViewUsers.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUsers_CellDoubleClick);
             // 
             // StatusAcc
             // 
@@ -332,6 +336,38 @@
             this.Birthday.ReadOnly = true;
             this.Birthday.Width = 355;
             // 
+            // menuUser
+            // 
+            this.menuUser.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.updateToolStripMenuItem,
+            this.deleteToolStripMenuItem});
+            this.menuUser.Name = "menuUser";
+            this.menuUser.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.menuUser.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.menuUser.RenderStyle.ColorTable = null;
+            this.menuUser.RenderStyle.RoundedEdges = true;
+            this.menuUser.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.menuUser.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.menuUser.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.menuUser.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.menuUser.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.menuUser.Size = new System.Drawing.Size(181, 70);
+            this.menuUser.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridUsers_MouseDown);
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateToolStripMenuItem.Text = "Update";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
             // Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -346,6 +382,7 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).EndInit();
+            this.menuUser.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -368,5 +405,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PhoneUser;
         private System.Windows.Forms.DataGridViewTextBoxColumn Birthday;
         private Guna.UI2.WinForms.Guna2Button addUser;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip menuUser;
+        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
     }
 }

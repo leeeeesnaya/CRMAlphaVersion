@@ -89,5 +89,10 @@ namespace CRMAlphaVersion
         {
             fileFromDB.DownloadFileFromDatabase();
         }
+
+        private void оновитиДанніToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
