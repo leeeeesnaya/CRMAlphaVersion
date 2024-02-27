@@ -144,7 +144,9 @@
     <Compile Include="AddNewRecord\AddNewOrganizations.Designer.cs">
       <DependentUpon>AddNewOrganizations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Scripts Delete\deleteScriptOrganization.cs" />
     <Compile Include="Scripts Delete\deleteScriptUser.cs" />
+    <Compile Include="Scripts Update\updateScriptOrganization.cs" />
     <Compile Include="Scripts Update\updateScriptUser.cs" />
     <Compile Include="UpdateRecord\UpdateContract.cs">
       <SubType>Form</SubType>
@@ -280,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddNewRecord\AddNewOrganizations.resx">
       <DependentUpon>AddNewOrganizations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRecord\UpdateOrganization.resx">
+      <DependentUpon>UpdateOrganization.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateRecord\UpdateUser.resx">
       <DependentUpon>UpdateUser.cs</DependentUpon>

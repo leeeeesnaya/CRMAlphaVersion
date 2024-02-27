@@ -132,5 +132,10 @@ namespace CRMAlphaVersion
             mainForm.FormClosed += (s, args) => { this.Close(); };
             mainForm.Show();
         }
+
+        private void dataGridViewUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
